@@ -1,23 +1,12 @@
+import React from 'react';
 import Link from 'next/link';
-import { observer } from 'mobx-react-lite';
-const randomId = () => Math.floor(Math.random() * 1000).toString(36);
 
 const links = [
   { href: 'https://github.com/zeit/next.js', label: 'GitHub' },
   { href: 'https://nextjs.org/docs', label: 'Docs' },
 ];
 
-export default observer(function Nav({ store }) {
-  if (typeof window !== 'undefined') {
-    import('reactotron-react-js').then(({ default: Reactotron }) => {
-      Reactotron.log(store.toJSON());
-    });
-  }
-
-  React.useEffect(() => {
-    store.addTodo(randomId(), 'New Task');
-  }, []);
-
+const Nav: React.FC = () => {
   return (
     <nav>
       <ul className="flex justify-between items-center p-8">
@@ -38,4 +27,6 @@ export default observer(function Nav({ store }) {
       </ul>
     </nav>
   );
-});
+};
+
+export default Nav;
