@@ -10,7 +10,7 @@
     "@tinacms/api-git": "^0.7.0",
     "@tinacms/git-client": "^0.6.6",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "mobx": "^5.15.4",
     "mobx-react-lite": "^1.5.2",
     "mobx-state-tree": "^3.15.0",
